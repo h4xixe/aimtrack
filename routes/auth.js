@@ -579,7 +579,7 @@ router.get('/profile', verifyJWT, async (req, res) => {
 
 router.get('/discord', (req, res) => {
     const clientId = process.env.DISCORD_CLIENT_ID;
-    const redirectUri = encodeURIComponent('http://localhost:3000/api/discord/callback');
+    const redirectUri = encodeURIComponent('http://85.31.61.15:3000/api/discord/callback');
     const scope = encodeURIComponent('identify');
     res.redirect(`https://discord.com/api/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}`);
 });
@@ -599,7 +599,7 @@ router.get('/discord/callback', async (req, res) => {
                 client_secret: process.env.DISCORD_CLIENT_SECRET,
                 grant_type: 'authorization_code',
                 code,
-                redirect_uri: 'http://localhost:3000/api/discord/callback',
+                redirect_uri: 'http://85.31.61.15:3000/api/discord/callback',
                 scope: 'identify'
             })
         });

@@ -21,7 +21,7 @@ const ProfileBanner: React.FC<ProfileBannerProps> = ({
       .join('')
       .slice(0, 2);
   };
-      const baseURL = "http://localhost:3000";
+      const baseURL = "http://85.31.61.15:3000";
   return (
     <div className="relative w-full mb-24">
       <div className="w-full h-64 overflow-hidden rounded-t-xl">
