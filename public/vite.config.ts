@@ -8,18 +8,36 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 3001,
+    hmr: {
+      protocol: 'wss',
+      host: 'localhost',
+      port: 3001,
+      clientPort: 3001
+    },
     proxy: {
-      '/api': 'https://api.aimtrack.pro', // backend
+      '/api': {
+        target: 'https://api.aimtrack.pro',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+        headers: {
+          'Access-Control-Allow-Origin': 'https://aimtrack.pro',
+          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+        }
+      }
     }
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1600,
+  }
 }));

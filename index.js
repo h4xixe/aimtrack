@@ -49,6 +49,7 @@ const corsOptions = {
   optionsSuccessStatus: 200
 };
 
+app.use(cors(corsOptions)); // Primeiro
 app.use(express.json());    // Depois
 
 app.use('/api', require('./routes/auth'));
