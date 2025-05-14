@@ -277,7 +277,7 @@ router.post('/auth', rateLimit, requireAuthToken, getIp, async (req, res) => {
             throw new Error('JWT_SECRET is not defined in environment variables');
         }
 
-        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
+        res.setHeader('Access-Control-Allow-Origin', 'https://aimtrack.pro/');
         res.setHeader('Access-Control-Allow-Credentials', 'true');
 
         // Busca o usuário no banco de dados
@@ -341,7 +341,7 @@ router.post('/authapp', rateLimit, getIp, async (req, res) => {
             throw new Error('JWT_SECRET is not defined in environment variables');
         }
 
-        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
+        res.setHeader('Access-Control-Allow-Origin', 'https://aimtrack.pro/');
         res.setHeader('Access-Control-Allow-Credentials', 'true');
 
         // Busca o usuário no banco de dados
@@ -417,7 +417,7 @@ router.post('/login', rateLimit, requireAuthToken, getIp, async (req, res) => {
             throw new Error('JWT_SECRET is not defined in environment variables');
         }
 
-        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
+        res.setHeader('Access-Control-Allow-Origin', 'https://aimtrack.pro/');
         res.setHeader('Access-Control-Allow-Credentials', 'true');
 
         let token;
@@ -697,7 +697,7 @@ router.get('/discord/callback', async (req, res) => {
             discordAvatar: avatarUrl || '',
             discordBanner: '' // Placeholder; requires additional scope
         }).toString();
-        res.redirect(`http://localhost:3001?${queryParams}`);
+        res.redirect(`https://aimtrack.pro/?${queryParams}`);
     } catch (error) {
         console.error('❌ Error in /api/discord/callback:', error.message, error.stack);
         res.status(500).json({ error: 'Internal server error' });
