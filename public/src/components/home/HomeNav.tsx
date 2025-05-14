@@ -68,7 +68,7 @@ const HomeNav: React.FC = () => {
           alt="Aim Track's Logo"
           className="h-16 w-auto mr-2 object-contain" 
         />
-              Aim Track's
+              AimTrack
             </div>
           </motion.div>
           
