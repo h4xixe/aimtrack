@@ -7,12 +7,12 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
-    port: 80,
+    port: 3001,
     hmr: {
       protocol: 'wss',
       host: 'aimtrack.pro',
-      port: 80,
-      clientPort: 80
+      port: 3001,
+      clientPort: 3001
     },
     proxy: {
       '/api': {
