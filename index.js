@@ -41,9 +41,6 @@ async function connectMongoDB() {
   }
 }
 
-app.use(cors(corsOptions)); // Primeiro
-app.use(express.json());    // Depois
-
 const corsOptions = {
   origin: ['https://aimtrack.pro'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -51,6 +48,10 @@ const corsOptions = {
   credentials: true,
   optionsSuccessStatus: 200
 };
+
+app.use(cors(corsOptions)); // Primeiro
+app.use(express.json());    // Depois
+
 app.use('/api', require('./routes/auth'));
 app.use('/webhook', require('./routes/webhook'));
 app.use('/uploads', express.static('uploads'));
