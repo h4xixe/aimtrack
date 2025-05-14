@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 3001,
     proxy: {
-      '/api': 'http://85.31.61.15:3000', // backend
+      '/api': 'https://api.aimtrack.pro', // backend
     }
   },
   plugins: [

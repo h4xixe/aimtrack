@@ -6,7 +6,7 @@ const PAYMENT_TOKEN = '7d06f4e56d3646f6f039af95598351f7a78fa52736536c645d3a62a9f
 
 // Cliente padrão
 const api = axios.create({
-  baseURL: 'http://85.31.61.15:3000/api',
+  baseURL: 'https://api.aimtrack.pro/api',
   headers: {
     'Content-Type': 'application/json',
   }
@@ -18,7 +18,7 @@ api.interceptors.request.use(config => {
 });
 
 const hwidApi = axios.create({
-  baseURL: 'http://85.31.61.15:3000/fetchhwid',
+  baseURL: 'https://api.aimtrack.pro/fetchhwid',
   headers: {
     'Content-Type': 'application/json',
   }
@@ -34,7 +34,7 @@ hwidApi.interceptors.request.use(config => {
 
 
 const resetApi = axios.create({
-  baseURL: 'http://85.31.61.15:3000/reset',
+  baseURL: 'https://api.aimtrack.pro/reset',
   headers: {
     'Content-Type': 'application/json',
   }
@@ -51,7 +51,7 @@ resetApi.interceptors.request.use(config => {
 
 // Cliente para pagamentos
 const paymentApi = axios.create({
-  baseURL: 'http://85.31.61.15:3000/api',
+  baseURL: 'https://api.aimtrack.pro/api',
   headers: {
     'Content-Type': 'application/json',
   }

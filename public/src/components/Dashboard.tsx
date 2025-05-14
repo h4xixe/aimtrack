@@ -23,7 +23,7 @@ const Dashboard: React.FC<DashboardProps> = ({ isDemoMode = false }) => {
   const token = localStorage.getItem("token");
 
   try {
-    await fetch("http://85.31.61.15:3000/api/logout", {
+    await fetch("https://api.aimtrack.pro/api/logout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
