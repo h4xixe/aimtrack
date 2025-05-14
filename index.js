@@ -42,7 +42,7 @@ async function connectMongoDB() {
 }
 
 const corsOptions = {
-  origin: ['https://aimtrack.pro'],
+  origin: 'https://aimtrack.pro',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-API-KEY'],
   credentials: true,
@@ -50,6 +50,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions)); // Primeiro
+app.options('*', cors(corsOptions));
 app.use(express.json());    // Depois
 
 app.use('/api', require('./routes/auth'));
