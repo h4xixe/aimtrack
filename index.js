@@ -43,7 +43,7 @@ async function connectMongoDB() {
 
 app.use(express.json());
 const corsOptions = {
-  origin: ['http://85.31.61.15:3000', 'https://aimtrack.pro'],
+  origin: ['http://85.31.61.15:3000', 'http://aimtrack.pro'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-API-KEY'],
   credentials: true,
