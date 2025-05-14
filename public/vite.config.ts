@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 3001,
     hmr: {
       protocol: 'wss',
-      host: 'localhost',
+      host: 'aimtrack.pro',
       port: 3001,
       clientPort: 3001
     },
