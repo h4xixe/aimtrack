@@ -45,7 +45,7 @@ const corsOptions = {
   origin: 'https://aimtrack.pro',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-API-KEY'],
-  credentials: true,
+  credentials: false,
   optionsSuccessStatus: 200
 };
 
