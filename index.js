@@ -50,7 +50,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions)); // Primeiro
-app.options('*', cors(corsOptions));
 app.use(express.json());    // Depois
 
 app.use('/api', require('./routes/auth'));
