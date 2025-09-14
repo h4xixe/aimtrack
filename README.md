@@ -54,7 +54,7 @@ O código está disponível para quem quiser estudar, utilizar ou adaptar em seu
 4. Execute o bot com `npm start` ou `node .`
 
 ```bash
-  git clone https://github.com/h4xixe/aimtrack.git
+  git clone https://github.com/h4xixe/payment-bot.git
   cd aimtrack
   npm install
   node .
