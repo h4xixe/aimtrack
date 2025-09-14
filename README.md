@@ -1,37 +1,38 @@
+Este projeto é um bot para Discord desenvolvido em Discord.js v14, com integração completa à API de pagamentos RisePay.
+O objetivo principal foi explorar o uso de gateways de pagamento em aplicações reais e, ao mesmo tempo, implementar um sistema de autenticação robusto com HWID Lock para gerenciamento de licenças.
+O código está disponível para quem quiser estudar, utilizar ou adaptar em seus próprios projetos.
 
-# Discord Bot feito com API de pagamento RisePay
 
-I created a Discord bot using the RisePay payment API to explore the use of payment gateway APIs and improve my skills. Alongside that, I also developed a complete authentication API system with HWID lock. If anyone wants to check it out and give it a try, the code is available! :)
+### Funcionalidades
 
+#### - Discord.js v14
+#### Estrutura moderna e eficiente, aproveitando todos os recursos mais recentes da API do Discord.
 
-### Features
+#### - Suporte a Slash Commands
+#### Sistema de comandos limpo e intuitivo, com suporte completo a autocompletar.
 
-#### - ✅ Built with Discord.js v14
-#### Modern and efficient structure leveraging the latest Discord API features.
+#### - Respostas com Embeds Personalizados
+#### Todas as respostas do bot utilizam embeds estilizados e informativos, garantindo melhor experiência de uso.
 
-#### - ⚡ Slash Commands Support
-#### Clean and intuitive command system with full autocomplete support.
+#### - Integração Avançada com RisePay
+#### Sistema de compra automatizado (Auto Buy).
+#### Geração de QR Code para pagamentos.
+#### Monitoramento de status de transações em tempo real.
 
-#### - 🎨 Custom Embeds for All Commands
-#### All bot responses use stylish and informative embeds for a better user experience.
+#### - Sistema de Autenticação com HWID Lock
+#### Verificação segura vinculada ao hardware do usuário, ideal para sistemas de licenciamento ou acesso premium.
 
-#### - 💳 Advanced Payment Integration with RisePay
-#### Includes a fully automated purchase system (Auto Buy) with QR Code generation and status tracking.
+#### - API REST Reutilizável
+#### API dedicada para integrações externas, podendo ser utilizada em sites, painéis ou outros bots.
 
-#### - 🔐 Robust Authentication System with HWID Lock
-#### Ensures secure user verification tied to hardware IDs, perfect for licensing or premium access.
+#### - Estrutura Modular
+#### Organização clara em pastas separadas (commands/, events/, api/, etc.), facilitando manutenção e escalabilidade.
 
-#### - 🌐 Reusable REST API
-#### Includes a dedicated API for external integrations—ideal for linking to websites, panels, or other bots.
+#### - Controle de Acesso por Cargo
+#### Permite restringir comandos e funcionalidades apenas a administradores ou cargos específicos.
 
-#### - 🛡️ Role-Based Access Control
-#### Certain commands and features are restricted to admins or specific roles for better security.
+#### - Webhook e Sistema de Licenças
+#### Integração com webhooks de pagamento, permitindo atualização de status de licenças em tempo real.
 
-#### - 📦 Modular Project Structure
-#### Clean folder organization with separation of concerns (commands/, events/, api/, etc.).
-
-#### - 📈 Webhook & License System Ready
-#### Integrates payment callbacks (webhooks) to update license status in real time.
-
-#### - 🧩 Easily Customizable
-#### Configurable files for keys, roles, product plans, pricing, and more.
+#### - Fácil Personalização
+#### Arquivos de configuração para chaves, cargos, planos de produto, preços e muito mais.
