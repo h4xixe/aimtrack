@@ -5,7 +5,7 @@ O objetivo principal foi explorar o uso de gateways de pagamento em aplicações
 O código está disponível para quem quiser estudar, utilizar ou adaptar em seus próprios projetos.
 
 
-### Funcionalidades
+## Funcionalidades
 
 ### Discord.js v14
 - Estrutura moderna e eficiente, aproveitando todos os recursos mais recentes da API do Discord.
@@ -38,6 +38,7 @@ O código está disponível para quem quiser estudar, utilizar ou adaptar em seu
 
 ### Fácil Personalização
 - Arquivos de configuração para chaves, cargos, planos de produto, preços e muito mais.
+
 ## Referência
 
  - [Discord.js v14](https://discord.js.org/)
